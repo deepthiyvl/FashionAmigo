@@ -3,10 +3,7 @@
   "appName": "Fashion Amigo",
   "webDir": "www",
   "server": {
-    "url": "https://your-fashion-amigo-url.com",
+    "url": "https://app.fashion-amigo.com",
     "cleartext": true
-  },
-  "ios": {
-    "contentInset": "always"
   }
 }
