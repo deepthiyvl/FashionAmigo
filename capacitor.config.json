@@ -1,9 +1,8 @@
 {
   "appId": "com.fashionamigo.app",
   "appName": "Fashion Amigo",
-  "webDir": "www",
+  "webDir": "dist",
   "server": {
-    "url": "https://app.fashion-amigo.com",
-    "cleartext": true
+    "androidScheme": "https"
   }
 }
