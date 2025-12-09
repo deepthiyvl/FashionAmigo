@@ -2,15 +2,9 @@
   "name": "fashion-amigo-ios",
   "version": "1.0.0",
   "description": "Fashion Amigo iOS App",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "@capacitor/core": "^5.5.1",
     "@capacitor/ios": "^5.5.1",
     "@capacitor/cli": "^5.5.1"
-  },
-  "author": "Fashion Amigo",
-  "license": "MIT"
+  }
 }
