@@ -14,9 +14,6 @@ workflows:
      - name: Install dependencies
        script: |
          npm ci
-     - name: Build web app
-       script: |
-         npm run build
      - name: Sync Capacitor
        script: |
          node node_modules/@capacitor/cli/bin/capacitor sync ios
