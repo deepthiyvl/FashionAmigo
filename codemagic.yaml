@@ -13,8 +13,8 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
-          npm install
-          npx cap sync ios
+          npm ci
+          node node_modules/@capacitor/cli/bin/capacitor sync ios
       - name: Set up code signing
         script: |
           keychain initialize
