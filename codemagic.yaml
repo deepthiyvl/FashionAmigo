@@ -19,7 +19,8 @@ workflows:
          node node_modules/@capacitor/cli/bin/capacitor sync ios
      - name: Set up code signing
        script: |
-        keychain initialize
+        xcode-project use-profiles
+        xcode-project detect-bundle-id
      - name: Build iOS app
        script: |
           xcode-project build-ipa \
