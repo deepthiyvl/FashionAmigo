@@ -4,13 +4,13 @@ workflows:
     max_build_duration: 60
     environment:
        groups:
-    - app_store_credentials
-  ios_signing:
-    distribution_type: app_store
-    bundle_identifier: com.fashionamigo.app
-  vars:
-    XCODE_WORKSPACE: "ios/App/App.xcworkspace"
-    XCODE_SCHEME: "App"
+         - app_store_credentials
+    ios_signing:
+      distribution_type: app_store
+      bundle_identifier: com.fashionamigo.app
+    vars:
+       XCODE_WORKSPACE: "ios/App/App.xcworkspace"
+       XCODE_SCHEME: "App"
       xcode: latest
       cocoapods: default
     scripts:
