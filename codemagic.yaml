@@ -5,15 +5,9 @@ workflows:
     environment:
       groups:
         - app_store_credentials
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.fashionamigo.app
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
-        BUNDLE_ID: "com.fashionamigo.app"
-        # Reference your uploaded provisioning profile by name
-        PROVISIONING_PROFILE_NAME: "FashionAmigoProvisioningProfile"
       xcode: latest
       cocoapods: default
     scripts:
@@ -26,13 +20,11 @@ workflows:
       - name: Set up code signing
         script: |
           xcode-project use-profiles
-          xcode-project detect-bundle-id
       - name: Build iOS app
         script: |
           xcode-project build-ipa \
             --workspace ios/App/App.xcworkspace \
-            --scheme App \
-            --export-options-plist $CM_BUILD_DIR/ios/App/exportOptions.plist
+            --scheme App
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
