@@ -29,7 +29,7 @@ workflows:
           xcode-project build-ipa \
             --workspace ios/App/App.xcworkspace \
             --scheme App \
-            --export-options-plist $CM_BUILD_DIR/exportOptions.plist
+            --export-options-plist $CM_BUILD_DIR/ios/App/exportOptions.plist
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
