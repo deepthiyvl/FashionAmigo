@@ -5,12 +5,17 @@
     <key>method</key>
     <string>app-store</string>
     <key>teamID</key>
-    <string>6AW385858P</string>
+    <string>6AW385S5P</string>
+    <key>signingStyle</key>
+    <string>manual</string>
+    <key>provisioningProfiles</key>
+    <dict>
+        <key>com.fashionamigo.app</key>
+        <string>FashionAmigoProvisioningProfile</string>
+    </dict>
     <key>uploadBitcode</key>
     <false/>
     <key>compileBitcode</key>
     <false/>
-    <key>uploadSymbols</key>
-    <true/>
 </dict>
 </plist>
