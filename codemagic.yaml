@@ -11,6 +11,9 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
+        BUNDLE_ID: "com.fashionamigo.app"
+        # Reference your uploaded provisioning profile by name
+        PROVISIONING_PROFILE_NAME: "FashionAmigoProvisioningProfile"
       xcode: latest
       cocoapods: default
     scripts:
