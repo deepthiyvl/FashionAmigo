@@ -20,7 +20,7 @@ workflows:
           sed -i '' 's/ENABLE_USER_SCRIPT_SANDBOXING = YES/ENABLE_USER_SCRIPT_SANDBOXING = NO/g' ios/App/App.xcodeproj/project.pbxproj
       - name: Set up code signing
         script: |
-          xcode-project use-profiles
+           xcode-project use-profiles --export-options-plist=$HOME/export_options.plist
       - name: Build iOS app
         script: |
           xcode-project build-ipa \
