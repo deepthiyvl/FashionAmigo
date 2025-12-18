@@ -12,12 +12,11 @@ workflows:
       - name: Install dependencies
         script: |
           npm ci
-      - name: Sync Capacitor
-        script: |
+      script: |
           npx cap sync ios
-          cd ios/App
-          pod deintegrate
-          pod install
+      - name: Disable script phase warnings
+        script: |
+          sed -i '' 's/ENABLE_USER_SCRIPT_SANDBOXING = YES/ENABLE_USER_SCRIPT_SANDBOXING = NO/g' ios/App/App.xcodeproj/project.pbxproj
       - name: Set up code signing
         script: |
           xcode-project use-profiles
