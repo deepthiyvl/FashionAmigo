@@ -14,7 +14,10 @@ workflows:
           npm ci
       - name: Sync Capacitor
         script: |
-          node node_modules/@capacitor/cli/bin/capacitor sync ios
+          npx cap sync ios
+          cd ios/App
+          pod deintegrate
+          pod install
       - name: Set up code signing
         script: |
           xcode-project use-profiles
