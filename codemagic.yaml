@@ -12,7 +12,8 @@ workflows:
       - name: Install dependencies
         script: |
           npm ci
-      script: |
+      - name: Sync Capacitor
+        script: |
           npx cap sync ios
       - name: Disable script phase warnings
         script: |
