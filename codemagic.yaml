@@ -31,7 +31,6 @@ workflows:
                    </array>
               </dict>
            </plist>
-           EOF
      - name: Fix CocoaPods script phases
        script: |
          ruby -e "
