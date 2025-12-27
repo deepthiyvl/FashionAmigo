@@ -9,6 +9,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
+        DISABLE_COCOAPODS_SCRIPT_WARNINGS: "YES"
       xcode: latest
       cocoapods: default
     scripts:
