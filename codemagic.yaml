@@ -28,6 +28,7 @@ workflows:
         script: |
           xcode-project build-ipa \
             --workspace ios/App/App.xcworkspace \
-            --scheme App
+            --scheme App \
+            --archive-flags "-allowProvisioningUpdates GCC_TREAT_WARNINGS_AS_ERRORS=NO"
     artifacts:
       - build/ios/ipa/*.ipa
