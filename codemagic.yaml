@@ -18,6 +18,19 @@ workflows:
       - name: Sync Capacitor
         script: |
           npx cap sync ios
+      - name: Create entitlements file
+        script: |
+          cat > ios/App/App.entitlements <<EOF
+           <?xml version="1.0" encoding="UTF-8"?>
+           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+           <plist version="1.0">
+              <dict>
+                 <key>com.apple.developer.associated-domains</key>
+                   <array>
+                     <string>applinks:fashionamigo.app</string>
+                   </array>
+              </dict>
+           </plist>
       - name: Disable script phase warnings
         script: |
           sed -i '' 's/ENABLE_USER_SCRIPT_SANDBOXING = YES/ENABLE_USER_SCRIPT_SANDBOXING = NO/g' ios/App/App.xcodeproj/project.pbxproj
