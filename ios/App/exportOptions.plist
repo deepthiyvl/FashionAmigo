@@ -11,7 +11,7 @@
     <key>provisioningProfiles</key>
     <dict>
         <key>com.fashionamigo.app</key>
-        <string>FashionAmigoProvisioningProfile</string>
+        <string>FashionAmigoIosProvisioningProfile</string>
     </dict>
     <key>uploadBitcode</key>
     <false/>
