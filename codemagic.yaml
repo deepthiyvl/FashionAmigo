@@ -34,6 +34,7 @@ workflows:
           -scheme App \
           -configuration Release \
           -archivePath $CM_BUILD_DIR/build/App.xcarchive \
+          -allowProvisioningUpdates \
           CODE_SIGN_STYLE=Automatic \
           DEVELOPMENT_TEAM=MGLWBWDJWL \
           GCC_TREAT_WARNINGS_AS_ERRORS=NO \
