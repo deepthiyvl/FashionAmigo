@@ -28,6 +28,7 @@ workflows:
            xcode-project use-profiles
       - name: Build iOS app
         script: |
+          sed -i '' '/PROVISIONING_PROFILE_SPECIFIER/d' ios/App/App.xcodeproj/project.pbxproj
           xcodebuild archive \
           -workspace ios/App/App.xcworkspace \
           -scheme App \
