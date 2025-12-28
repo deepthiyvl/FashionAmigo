@@ -33,6 +33,8 @@ workflows:
           -scheme App \
           -configuration Release \
           -archivePath $CM_BUILD_DIR/build/App.xcarchive \
+          CODE_SIGN_STYLE=Automatic \
+          DEVELOPMENT_TEAM=6AW385S5P \
           GCC_TREAT_WARNINGS_AS_ERRORS=NO \
           RUN_CLANG_STATIC_ANALYZER=NO
     
