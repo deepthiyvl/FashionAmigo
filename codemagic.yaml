@@ -19,6 +19,22 @@ workflows:
       - name: Sync Capacitor
         script: |
           npx cap sync ios
+      - name: Fix CocoaPods script phases
+        script: |
+        # Add output files to CocoaPods script phases
+        cat > fix_pods.rb << 'EOF'
+        require 'xcodeproj'
+        project = Xcodeproj::Project.open('ios/App/App.xcodeproj')
+        project.targets.each do |target|
+          target.shell_script_build_phases.each do |phase|
+            if phase.name && phase.name.start_with?('[CP]')
+               phase.output_paths = ['$(DERIVED_FILE_DIR)/Pods-dummy-output.txt'] if phase.output_paths.empty?
+            end
+          end
+        end
+        project.save
+        EOF
+        ruby fix_pods.rb
       - name: Set up code signing
         script: |
            xcode-project use-profiles
