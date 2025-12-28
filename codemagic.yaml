@@ -19,9 +19,6 @@ workflows:
       - name: Sync Capacitor
         script: |
           npx cap sync ios
-      - name: Fix CocoaPods outputs
-        script: |
-          sed -i '' 's/shellScript = "\\${PODS_ROOT}\\/Target Support Files\\/Pods-App\\/Pods-App-frameworks.sh\\n";/shellScript = "\\${PODS_ROOT}\\/Target Support Files\\/Pods-App\\/Pods-App-frameworks.sh\\n";\n\t\t\toutputPaths = (\n\t\t\t\t"\$(DERIVED_FILE_DIR)\/Pods-App-frameworks.txt",\n\t\t\t);/g' ios/App/App.xcodeproj/project.pbxproj
       - name: Set up code signing
         script: |
            xcode-project use-profiles
