@@ -36,7 +36,7 @@ workflows:
             GCC_TREAT_WARNINGS_AS_ERRORS=NO \
             RUN_CLANG_STATIC_ANALYZER=NO
     
-        xcodebuild -exportArchive \
+           xcodebuild -exportArchive \
             -archivePath $CM_BUILD_DIR/build/App.xcarchive \
             -exportPath $CM_BUILD_DIR/build \
             -exportOptionsPlist ios/App/exportOptions.plist
