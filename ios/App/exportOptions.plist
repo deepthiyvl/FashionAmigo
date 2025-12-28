@@ -10,7 +10,7 @@
     <string>manual</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.fashionamigo.app</key>
+        <key>com.fashion-amigo.app</key>
         <string>FashionAmigoIosProvisioningProfile</string>
     </dict>
     <key>uploadBitcode</key>
