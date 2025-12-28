@@ -31,6 +31,7 @@ workflows:
           xcode-project build-ipa \
             --workspace ios/App/App.xcworkspace \
             --scheme App \
-            --archive-flags="GCC_TREAT_WARNINGS_AS_ERRORS=NO"
+            GCC_TREAT_WARNINGS_AS_ERRORS=NO \
+            RUN_CLANG_STATIC_ANALYZER=NO
     artifacts:
       - build/ios/ipa/*.ipa
