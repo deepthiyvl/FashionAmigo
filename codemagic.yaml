@@ -45,4 +45,4 @@ workflows:
           -exportPath $CM_BUILD_DIR/build \
           -exportOptionsPlist ios/App/exportOptions.plist
     artifacts:
-      - build/ios/ipa/*.ipa
+      - build/*.ipa
