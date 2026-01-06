@@ -5,5 +5,8 @@
   "server": {
     "url": "https://app.fashion-amigo.com",
     "cleartext": true
+  },
+  "ios": {
+    "icon": "icon.png"
   }
 }
