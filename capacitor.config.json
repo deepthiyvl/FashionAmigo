@@ -8,9 +8,6 @@
   },
   "ios": {
     "icon": "aded2918f_FashionAmigoIcon.png"
-    "buildVersion": "4",
-  "infoPlist": {
-    "NSCameraUsageDescription": "Fashion Amigo needs camera access to photograph your clothing items for your digital wardrobe"
-  }
+     }
   }
 }
